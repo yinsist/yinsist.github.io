@@ -1,0 +1,53 @@
+import{g as D,h as H}from"../modules/unplugin-icons-DedHScPa.js";import{d as R,f as g,i as b,o as d,n as C,r as A,O as V,E as P,L as G,z as _,aK as M,D as Q,j as z,e as S,g as e,t as K,T as u,b as E,k as U,w as k,m as T,ad as s,v as O,x as W}from"../modules/vue-3MX-AAUY.js";import{o as B,al as X,C as F,am as J,an as Y}from"../index-CPDaYc2D.js";import{u as L,f as Z}from"./context-CCvA-To0.js";import{I as ee}from"./default-N-ojdLkz.js";import"../modules/shiki-DyOxNjFt.js";const se=R({__name:"TitleIcon",props:{title:{}},setup(a){const n={pnpm:"i-vscode-icons:file-type-light-pnpm",npm:"i-vscode-icons:file-type-npm",yarn:"i-vscode-icons:file-type-yarn",bun:"i-vscode-icons:file-type-bun",deno:"i-vscode-icons:file-type-deno",vue:"i-vscode-icons:file-type-vue",svelte:"i-vscode-icons:file-type-svelte",angular:"i-vscode-icons:file-type-angular",react:"i-vscode-icons:file-type-reactjs",next:"i-vscode-icons:file-type-light-next",nuxt:"i-vscode-icons:file-type-nuxt",solid:"logos:solidjs-icon",astro:"i-vscode-icons:file-type-light-astro",rollup:"i-vscode-icons:file-type-rollup",webpack:"i-vscode-icons:file-type-webpack",vite:"i-vscode-icons:file-type-vite",esbuild:"i-vscode-icons:file-type-esbuild","package.json":"i-vscode-icons:file-type-node","tsconfig.json":"i-vscode-icons:file-type-tsconfig",".npmrc":"i-vscode-icons:file-type-npm",".editorconfig":"i-vscode-icons:file-type-editorconfig",".eslintrc":"i-vscode-icons:file-type-eslint",".eslintignore":"i-vscode-icons:file-type-eslint","eslint.config":"i-vscode-icons:file-type-eslint",".gitignore":"i-vscode-icons:file-type-git",".gitattributes":"i-vscode-icons:file-type-git",".env":"i-vscode-icons:file-type-dotenv",".env.example":"i-vscode-icons:file-type-dotenv",".vscode":"i-vscode-icons:file-type-vscode","tailwind.config":"vscode-icons:file-type-tailwind","uno.config":"i-vscode-icons:file-type-unocss","unocss.config":"i-vscode-icons:file-type-unocss",".oxlintrc":"i-vscode-icons:file-type-oxlint","vue.config":"i-vscode-icons:file-type-vueconfig",".mts":"i-vscode-icons:file-type-typescript",".cts":"i-vscode-icons:file-type-typescript",".ts":"i-vscode-icons:file-type-typescript",".tsx":"i-vscode-icons:file-type-typescript",".mjs":"i-vscode-icons:file-type-js",".cjs":"i-vscode-icons:file-type-js",".json":"i-vscode-icons:file-type-json",".js":"i-vscode-icons:file-type-js",".jsx":"i-vscode-icons:file-type-js",".md":"i-vscode-icons:file-type-markdown",".py":"i-vscode-icons:file-type-python",".ico":"i-vscode-icons:file-type-favicon",".html":"i-vscode-icons:file-type-html",".css":"i-vscode-icons:file-type-css",".scss":"i-vscode-icons:file-type-scss",".yml":"i-vscode-icons:file-type-light-yaml",".yaml":"i-vscode-icons:file-type-light-yaml",".php":"i-vscode-icons:file-type-php",".svg":"i-vscode-icons:file-type-svg"};function t(l){const i=l.match(/~([^~]+)~/g);if(i&&i.length>0)return i[0].slice(1,-1);const c=Object.keys(n).sort((p,m)=>m.length-p.length);for(const p of c)if(l.toLowerCase().includes(p.toLowerCase()))return n[p];return""}return(l,i)=>t(a.title)?(d(),g("div",{key:0,class:C(`${t(a.title)} w-3.5 h-3.5 relative`)},null,2)):b("v-if",!0)}}),ne=["data-title"],le={key:0,class:"slidev-code-block-title"},ie={class:"leading-1em"},te=["title"],ae=R({__name:"CodeBlockWrapper",props:{ranges:{type:Array,default:()=>[]},finally:{type:[String,Number],default:"last"},startLine:{type:Number,default:1},lines:{type:Boolean,default:B.lineNumbers},at:{type:[String,Number],default:"+1"},maxHeight:{type:String,default:void 0},title:{type:String,default:void 0}},setup(a){const n=a,{$clicksContext:t}=L(),l=A(),i=X();V(()=>{t.unregister(i)}),P(()=>{l.value?.classList.toggle("slidev-code-line-numbers",n.lines)}),G(()=>{if(!t||!n.ranges?.length)return;const o=t.calculateSince(n.at,n.ranges.length-1);t.register(i,o);const f=_(()=>o?Math.max(0,t.current-o.start+1):F),y=_(()=>n.finally==="last"?n.ranges.at(-1):n.finally.toString());P(()=>{if(!l.value)return;let v=n.ranges[f.value]??y.value;const h=v==="hide";l.value.classList.toggle(J,h),h&&(v=n.ranges[f.value+1]??y.value);const j=l.value.querySelector(".shiki"),I=Array.from(j.querySelectorAll("code > .line")),$=I.length;if(Y(v,$,n.startLine,r=>[I[r]]),n.maxHeight){const r=Array.from(j.querySelectorAll(".line.highlighted"));r.reduce((N,q)=>q.offsetHeight+N,0)>l.value.offsetHeight?r[0].scrollIntoView({behavior:"smooth",block:"start"}):r.length>0&&r[Math.round((r.length-1)/2)].scrollIntoView({behavior:"smooth",block:"center"})}})});const{copied:c,copy:p}=M();function m(){const o=l.value?.querySelector(".slidev-code")?.textContent;o&&p(o)}const x=Q("activeTitle",null),w=_(()=>x===null&&n.title);return(o,f)=>{const y=D,v=H;return d(),g("div",{ref_key:"el",ref:l,class:C(["slidev-code-wrapper relative group",{"slidev-code-line-numbers":n.lines,active:u(x)===a.title}]),style:U({"max-height":n.maxHeight,"overflow-y":n.maxHeight?"scroll":void 0,"--start":n.startLine}),"data-title":a.title},[w.value?(d(),g("div",le,[S(se,{title:a.title},null,8,["title"]),e("div",ie,K(a.title.replace(/~([^~]+)~/g,"").trim()),1)])):b("v-if",!0),z(o.$slots,"default"),u(B).codeCopy?(d(),g("button",{key:1,class:C(["slidev-code-copy absolute right-0 transition opacity-0 group-hover:opacity-20 hover:!opacity-100",w.value?"top-10":"top-0"]),title:u(c)?"Copied":"Copy",onClick:f[0]||(f[0]=h=>m())},[u(c)?(d(),E(y,{key:0,class:"p-2 w-8 h-8"})):(d(),E(v,{key:1,class:"p-2 w-8 h-8"}))],10,te)):b("v-if",!0)],14,ne)}}}),oe={grid:"~ cols-2 gap-2",m:"t-2"},ye={__name:"slides.md__slidev_17",setup(a){const{$clicksContext:n,$frontmatter:t}=L();return n.setup(),(l,i)=>{const c=ae;return d(),E(ee,O(W(u(Z)(u(t),16))),{default:k(()=>[e("div",oe,[S(c,T({},{title:"",ranges:[]}),{default:k(()=>[...i[0]||(i[0]=[e("pre",{class:"shiki shiki-themes vitesse-dark vitesse-light slidev-code",style:{"--shiki-dark":"#dbd7caee","--shiki-light":"#393a34","--shiki-dark-bg":"#121212","--shiki-light-bg":"#ffffff"}},[e("code",{class:"language-text"},[e("span",{class:"line"},[e("span",null,"  时间轴 (gem5 Tick)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  gem5 CPU 发起请求")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  packet->headerDelay = 1000 (gem5 ticks)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"  1000 ────────────────────────────────────────────────────")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  SCSlavePort::recvTimingReq")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  delay = sc_time::from_value(1000)  // 转换为 SystemC 时间")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  nb_transport_fw(*trans, BEGIN_REQ, delay)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  Target::nb_transport_fw")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  m_peq.notify(trans, BEGIN_REQ, delay)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  [SystemC 时间推进到 1000 ps]")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  Target::peq_cb(BEGIN_REQ)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  send_end_req()")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  nb_transport_bw(trans, END_REQ, delay=10ns)  ← TLM 返回延迟")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  SCSlavePort::nb_transport_bw")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  pe->notify(trans, END_REQ, 10ns)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  PayloadEvent::notify:")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |    nextEventTick = sc_time_stamp().value() + 10ns")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |                  = 1000 + 10000 = 11000")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |    ")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")])])],-1)])]),_:1},16),S(c,T({},{title:"",ranges:[]}),{default:k(()=>[...i[1]||(i[1]=[e("pre",{class:"shiki shiki-themes vitesse-dark vitesse-light slidev-code",style:{"--shiki-dark":"#dbd7caee","--shiki-light":"#393a34","--shiki-dark-bg":"#121212","--shiki-light-bg":"#ffffff"}},[e("code",{class:"language-text"},[e("span",{class:"line"},[e("span",null,"            port.owner.schedule(this, 11000)  ← 在 gem5 中调度事件")]),s(`
+`),e("span",{class:"line"},[e("span",null,"  11000 ───────────────────────────────────────────────────")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  [gem5 时间推进到 11000]")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  PayloadEvent::process()")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  SCSlavePort::pec(END_REQ)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  [等待 Target 执行事务...]")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  Target::send_response(BEGIN_RESP, delay=10ns)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  SCSlavePort::nb_transport_bw")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  pe->notify(trans, BEGIN_RESP, 10ns)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  PayloadEvent::notify:")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |    nextEventTick = 11000 + 10000 = 21000")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |    port.owner.schedule(this, 21000)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"  21000 ───────────────────────────────────────────────────")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  [gem5 时间推进到 21000]")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  PayloadEvent::process()")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  SCSlavePort::pec(BEGIN_RESP)")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |  sendTimingResp(packet)  ← 响应返回 gem5 CPU")]),s(`
+`),e("span",{class:"line"},[e("span",null,"      |")])])],-1)])]),_:1},16)])]),_:1},16)}}};export{ye as default};
